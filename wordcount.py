@@ -26,7 +26,22 @@ print(tokenize('test.txt'))
 
 
 
-# def count_words(file):
+
+
+def count_words(words):
+  """ Takes in a lists of words and returns a dictionary of each string and number of occurrence"""
+  word_count = {}
+  for word in words:
+      if word not in word_count:
+          word_count[word] = 1
+      else:
+          word_count[word] += 1
+  return word_count
+
+
+
+print(count_words(tokenize('test.txt')))
+
 #     word_count = {}
 
 #         for word in words:
