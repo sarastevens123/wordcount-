@@ -3,11 +3,12 @@
 
 def tokenize(file):
   """Returns a list of words from the file"""
-  open_file = open(file)
+  open_file = open(file.lower())
   list_of_words = []
   for line in open_file:
     line = line.rstrip()
     words = line.split(' ')
+    
 
     for word in words:
       if not word:
@@ -47,5 +48,4 @@ def print_word_count(word_count):
 #print_word_count(count_words(tokenize('test.txt')))
 
 
-#I need to fix the code to accept upper and lower case letters as the same in the count
 
